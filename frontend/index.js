@@ -18,7 +18,7 @@ import thunk from 'redux-thunk'
 // enable redux dev tools
 import reducer from './state/reducer'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(reducer, {}, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
 // STEP 7 👈
 // wrap the app in the provider

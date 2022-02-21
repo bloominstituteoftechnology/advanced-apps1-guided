@@ -10,8 +10,6 @@ import axios from 'axios'
 // the action contains everything needed to compute a new state
 export const inputChange = value => ({ type: types.INPUT_CHANGE, payload: value })
 export const toggleShowCompleteds = () => ({ type: types.TOGGLE_DISPLAY_COMPLETEDS })
-// export const addTodo = name => ({ type: types.ADD_NEW_TODO, payload: { id: getId(), completed: false, name } })
-// export const toggleTodoStatus = id => ({ type: types.TOGGLE_TODO_STATUS, payload: id })
 
 // STEP 4 👈
 // Build asynchronous action creators

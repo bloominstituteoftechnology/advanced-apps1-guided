@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import * as actionCreators from '../state/action-creators'
 
 // STEP 8 👈
-// Connect this component, finish the cleanup of App.js
+// Connect this component
 // and trigger the fetching of the todos from the API
 // and the toggling of a todo's status
 export function TodoList(props) {

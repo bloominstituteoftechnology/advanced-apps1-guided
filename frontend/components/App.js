@@ -38,7 +38,6 @@ export default function App(props) {
         debugger
       })
   }
-
   const toggleShowCompleteds = () => {
     setShouldShowCompleteds(!shouldShowCompleteds)
   }

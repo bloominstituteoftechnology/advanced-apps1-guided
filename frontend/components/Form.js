@@ -25,8 +25,8 @@ export default function Form(props) {
         <input
           value={nameInput}
           onChange={onChange}
-          type="text"
           placeholder="Type todo"
+          type="text"
         />
         <input type="submit" disabled={!nameInput.length} />
       </form>

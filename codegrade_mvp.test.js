@@ -9,9 +9,7 @@ jest.setTimeout(750) // default 5000 too long for Codegrade
 beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
 afterEach(() => { server.resetHandlers() })
-beforeEach(() => {
-  render(<App />)
-})
+beforeEach(() => { render(<App />) })
 
 test('App is a class-based component', async () => {
   await screen.findByText('laundry')

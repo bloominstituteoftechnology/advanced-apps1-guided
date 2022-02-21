@@ -1,17 +1,19 @@
 import server from './backend/mock-server'
 import React from 'react'
 import App from './frontend/components/App'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import { resetTodos } from './backend/helpers'
 import '@testing-library/jest-dom/extend-expect'
 
-jest.setTimeout(750) // default 5000 too long for Codegrade
-
+// not needed for module project, START
 beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
 afterEach(() => { server.resetHandlers() })
-beforeEach(() => { render(<App />) })
+beforeEach(() => { resetTodos() })
+// not needed for module project, END
 
-test('App is a class-based component', async () => {
+test('App is NOT a class-based component', async () => {
+  render(<App />)
   await screen.findByText('laundry')
   expect(
     App.prototype &&

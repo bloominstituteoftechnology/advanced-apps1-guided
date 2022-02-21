@@ -3,7 +3,6 @@ import React from 'react'
 import App from './frontend/components/App'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { resetStore } from './frontend/index'
 
 jest.setTimeout(750) // default 5000 too long for Codegrade
 
@@ -11,7 +10,6 @@ beforeAll(() => { server.listen() })
 afterAll(() => { server.close() })
 afterEach(() => { server.resetHandlers() })
 beforeEach(() => {
-  resetStore()
   render(<App />)
 })
 
@@ -20,5 +18,5 @@ test('App is a class-based component', async () => {
   expect(
     App.prototype &&
     App.prototype.isReactComponent
-  ).toBeTruthy()
+  ).not.toBeTruthy()
 })

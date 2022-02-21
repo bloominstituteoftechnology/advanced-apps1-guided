@@ -1,16 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Todo from './Todo'
-import { connect } from 'react-redux'
-import * as actionCreators from '../state/action-creators'
 
-// STEP 8 👈
-// Connect this component
-// and trigger the fetching of the todos from the API
-// and the toggling of a todo's status
-export function TodoList(props) {
-  useEffect(() => {
-    props.fetchTodosFromApi()
-  }, [])
+export default function TodoList(props) {
   const { todos, shouldShowCompleteds, patchTodoInApi } = props
   return (
     <div id="todos">
@@ -30,4 +21,3 @@ export function TodoList(props) {
     </div>
   )
 }
-export default connect(state => state, actionCreators)(TodoList)

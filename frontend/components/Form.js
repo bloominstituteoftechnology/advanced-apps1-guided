@@ -1,24 +1,23 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import * as actionCreators from '../state/action-creators'
 
-// STEP 9 👈
-// Fix this component so it triggers
-// the POSTing of a new todo to the API
-export function Form(props) {
+export default function Form(props) {
+  const {
+    nameInput,
+    postTodoToApi,
+    inputChange,
+    shouldShowCompleteds,
+    toggleShowCompleteds,
+  } = props
+
   const onSubmit = evt => {
     evt.preventDefault()
-    props.postTodoToApi(props.nameInput)
+    postTodoToApi(nameInput)
   }
+
   const onChange = evt => {
     const { value } = evt.target
-    props.inputChange(value)
+    inputChange(value)
   }
-  const {
-    toggleShowCompleteds,
-    shouldShowCompleteds,
-    nameInput,
-  } = props
 
   return (
     <>
@@ -38,4 +37,3 @@ export function Form(props) {
     </>
   )
 }
-export default connect(state => state, actionCreators)(Form)

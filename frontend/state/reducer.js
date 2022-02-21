@@ -3,7 +3,6 @@ import { combineReducers } from 'redux'
 
 // STEP 1 👈
 // Think what slices of state your app needs
-// remove any hard-coded data since we'll be using an API
 const initialTodos = []
 function todos(state = initialTodos, action) {
   switch (action.type) {

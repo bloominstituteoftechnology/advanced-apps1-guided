@@ -1,4 +1,4 @@
-# Advanced State Management Guided Project
+# Advanced Web Applications Guided Project
 
 ## Introduction
 

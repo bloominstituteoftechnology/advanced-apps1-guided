@@ -57,5 +57,6 @@ test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
 })
 test('<App /> Todos can be completed by the user', async () => {
   render(<App learner={undefined} />)
+  await screen.findByText('laundy')
 })
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

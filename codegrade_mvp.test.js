@@ -39,7 +39,8 @@ test('<Todo /> component renders completion of todos correctly', () => {
   />)
   expect(screen.queryByText('Alex')).toBeInTheDocument()
   rerender(<Todo
-    
+    todo={{ name: 'Alex', id: 'xyz', completed: true }}
+    toggleStatus={Function.prototype}
   />)
 })
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')

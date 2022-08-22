@@ -17,6 +17,7 @@ beforeEach(() => { resetTodos() })
 
 test('<App /> renders learners synchronously', () => {
   render(<App />)
+  // ????
 })
 test.todo('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')

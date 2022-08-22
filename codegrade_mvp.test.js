@@ -66,5 +66,5 @@ test('<App /> Can submit a new todo, and shows up uncompleted', async () => {
   fireEvent.change(screen.getByPlaceholderText('Type todo'), { target: { value: 'foobar' } })
   fireEvent.click(screen.getByTestId('theSubmit'))
   await screen.findByText('foobar')
-  expect(document.querySelector())
+  expect(document.querySelectorAll('.todo')[3])
 })

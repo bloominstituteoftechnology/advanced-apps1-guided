@@ -64,5 +64,6 @@ test('<App /> Can submit a new todo, and shows up uncompleted', async () => {
   render(<App learner={undefined} />)
   await screen.findByText('laundry')
   fireEvent.change(screen.getByPlaceholderText('Type todo'), { target: { value: 'foobar'}})
-  screen.debug()
+  fireEvent.click(screen.getByTestId('theSubmit'))
+  await screen.findByText('laundry')
 })

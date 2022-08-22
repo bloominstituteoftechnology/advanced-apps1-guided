@@ -5,7 +5,7 @@ export default function Todo(props) {
 
   return (
     <div
-      onClick={() => toggleStatus(todo.id)}
+      onClick={toggleStatus}
       className="todo"
     >
       {todo.name}{todo.completed ? ` ✔️` : ''}

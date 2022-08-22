@@ -37,7 +37,7 @@ test('<Todo /> component renders completion of todos correctly', () => {
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
     toggleStatus={Function.prototype}
   />)
-  expect
+  screen.getByText('Alex')
 })
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
 test.todo('<App /> Todos can be completed by the user')

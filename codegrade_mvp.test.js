@@ -17,8 +17,9 @@ beforeEach(() => { resetTodos() })
 
 test('<App /> renders learners synchronously', () => {
   render(<App />)
-  const learner = screen.queryByText('Britt', { exact: false })
+  const learner = screen.queryByText('Jordon', { exact: false })
   expect(learner).toBeInTheDocument()
+  screen.debug()
 })
 test.todo('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')

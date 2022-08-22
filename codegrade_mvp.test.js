@@ -52,7 +52,7 @@ test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
     toggleStatus={spy}
   />)
-  fireEvent.click()
+  fireEvent.click(screen.getByText('Alex'))
 })
 test.todo('<App /> Todos can be completed by the user')
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

@@ -62,4 +62,6 @@ test('<App /> Todos can be completed by the user', async () => {
 })
 test('<App /> Can submit a new todo, and shows up uncompleted', async () => {
   render(<App learner={undefined} />)
+  await screen.findByText('laundry')
+  
 })

@@ -15,7 +15,7 @@ afterAll(() => { server.close() })
 afterEach(() => { server.resetHandlers() })
 beforeEach(() => { resetTodos() })
 
-test.todo('<App /> renders learners synchronously')
+test('<App /> renders learners synchronously', () => {})
 test.todo('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')

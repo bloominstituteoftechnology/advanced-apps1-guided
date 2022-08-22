@@ -16,10 +16,10 @@ afterEach(() => { server.resetHandlers() })
 beforeEach(() => { resetTodos() })
 
 test('<App /> renders learners synchronously', () => {
-  render(<App />)
+  const {} = render(<App />)
   const learner = screen.queryByText('Jordon', { exact: false })
   expect(learner).toBeInTheDocument()
-  // what if we want to make App take a new prop and rerender itselt
+  // what if we want to make App take a new prop and rerender itself
 })
 test.todo('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')

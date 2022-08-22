@@ -33,11 +33,14 @@ test('<App /> renders "laundry" asynchronously', async () => {
   screen.getByText('groceries')
 })
 test('<Todo /> component renders completion of todos correctly', () => {
-  render(<Todo
+  const { rerender } = render(<Todo
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
     toggleStatus={Function.prototype}
   />)
   expect(screen.queryByText('Alex')).toBeInTheDocument()
+  rerender(<Todo
+    
+  />)
 })
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
 test.todo('<App /> Todos can be completed by the user')

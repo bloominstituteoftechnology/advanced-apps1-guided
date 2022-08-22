@@ -22,7 +22,7 @@ test('<App /> renders learners synchronously', () => {
   // what if we want to make App take a new prop and rerender itself
   rerender(<App learner="Brittany" />)
   expect(screen.queryByText('Jordon', { exact: false })).not.toBeInTheDocument()
-  expect(screen.queryByText('Brittany', { exact: false })).toBeInTheDocument()
+  expect(screen.queryByText('Brittany')).toBeInTheDocument()
   screen.debug()
 })
 test.todo('<App /> renders "laundry" asynchronously')

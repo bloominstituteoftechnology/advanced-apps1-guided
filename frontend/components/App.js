@@ -48,7 +48,7 @@ export default function App(props) {
 
   return (
     <div>
-      {props.learner || 'Luis'} is the learner of the day
+      {props.learner || 'Jordon'} is the learner of the day
       <TodoList
         shouldShowCompleteds={shouldShowCompleteds}
         patchTodoInApi={patchTodoInApi}

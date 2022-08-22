@@ -19,7 +19,7 @@ test('<App /> renders learners synchronously', () => {
   render(<App />)
   const learner = screen.queryByText('Jordon', { exact: false })
   expect(learner).toBeInTheDocument()
-  
+  // what if we want to make App take a new prop and rerender itselt
 })
 test.todo('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')

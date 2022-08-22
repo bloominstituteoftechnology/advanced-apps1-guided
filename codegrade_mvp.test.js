@@ -53,7 +53,7 @@ test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
     toggleStatus={spy}
   />)
   fireEvent.click(screen.getByText('Alex'))
-  expect(spy).not.toHaveBeenCalled()
+  expect(spy).toHaveBeenCalledWith('xyz')
 })
 test.todo('<App /> Todos can be completed by the user')
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

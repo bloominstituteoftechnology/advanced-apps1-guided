@@ -35,7 +35,7 @@ test('<App /> renders "laundry" asynchronously', async () => {
 test('<Todo /> component renders completion of todos correctly', () => {
   render(<Todo
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
-
+    toggleStatus={}
   />)
 })
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')

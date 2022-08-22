@@ -26,8 +26,8 @@ test('<App /> renders learners synchronously', () => {
 })
 test('<App /> renders "laundry" asynchronously', async () => {
   render(<App learner={undefined} />)
-  screen.getByText('laundry') // only works synchronously
-  screen.queryByText('laundry')
+  // screen.getByText('laundry') // only works synchronously
+  // screen.queryByText('laundry') // only works synchronously
 })
 test.todo('<Todo /> component renders completion of todos correctly')
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')

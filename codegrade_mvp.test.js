@@ -11,7 +11,9 @@ import App from './frontend/components/App'
 import Todo from './frontend/components/Todo'
 
 jest.mock('uuid', () => {
-  
+  return { v4() {
+    return 'xxxxxxxxx'
+  }}
 })
 
 beforeAll(() => { server.listen() })

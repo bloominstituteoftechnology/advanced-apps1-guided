@@ -55,5 +55,7 @@ test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
   fireEvent.click(screen.getByText('Alex'))
   expect(spy).toHaveBeenCalledWith('xyz')
 })
-test('<App /> Todos can be completed by the user')
+test('<App /> Todos can be completed by the user', async () => {
+  render(<App learner={undefined} />)
+})
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

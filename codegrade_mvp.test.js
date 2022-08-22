@@ -59,6 +59,6 @@ test('<App /> Todos can be completed by the user', async () => {
   render(<App learner={undefined} />)
   const laundry = await screen.findByText('laundry')
   fireEvent.click(laundry)
-  expect()
+  expect().toBe
 })
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

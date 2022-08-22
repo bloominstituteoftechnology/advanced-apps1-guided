@@ -16,7 +16,7 @@ afterEach(() => { server.resetHandlers() })
 beforeEach(() => { resetTodos() })
 
 test('<App /> renders learners synchronously', () => {
-  const { rerender } = render(<App />)
+  const { rerender } = render(<App learner={undefined} />)
   const learner = screen.queryByText('Jordon', { exact: false })
   expect(learner).toBeInTheDocument()
   // what if we want to make App take a new prop and rerender itself

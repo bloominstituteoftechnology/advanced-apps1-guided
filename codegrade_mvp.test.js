@@ -24,9 +24,10 @@ test('<App /> renders learners synchronously', () => {
   expect(screen.queryByText('Jordon', { exact: false })).not.toBeInTheDocument()
   expect(screen.queryByText('Brittany', { exact: false })).toBeInTheDocument()
 })
-test('<App /> renders "laundry" asynchronously', () => {
+test('<App /> renders "laundry" asynchronously', async () => {
   render(<App learner={undefined} />)
-  screen.getByText('laundry')
+  screen.getByText('laundry') // only works synchronously
+  screen.queryByText('laundry')
 })
 test.todo('<Todo /> component renders completion of todos correctly')
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')

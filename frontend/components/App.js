@@ -3,7 +3,7 @@ import Form from './Form'
 import TodoList from './TodoList'
 import axios from 'axios'
 
-export default function App(props) {
+export default function App(props) { // learner prop
   const [todos, setTodos] = useState([])
   const [shouldShowCompleteds, setShouldShowCompleteds] = useState(true)
   const [nameInput, setNameInput] = useState('')

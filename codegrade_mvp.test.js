@@ -43,8 +43,8 @@ test('<Todo /> component renders completion of todos correctly', () => {
     toggleStatus={Function.prototype}
   />)
   expect(screen.queryByText('Alex ✔️')).toBeInTheDocument()
-  screen.queryByText('lady gaga') // this is null
-  screen.getByText('lady gaga')
+  // screen.queryByText('lady gaga') // this is null
+  // screen.getByText('lady gaga') // this is a CRASH
 })
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
 test.todo('<App /> Todos can be completed by the user')

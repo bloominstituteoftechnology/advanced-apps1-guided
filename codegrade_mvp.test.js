@@ -32,7 +32,9 @@ test('<App /> renders "laundry" asynchronously', async () => {
   screen.getByText('dishes')
   screen.getByText('groceries')
 })
-test.todo('<Todo /> component renders completion of todos correctly')
+test('<Todo /> component renders completion of todos correctly', () => {
+  render()
+})
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
 test.todo('<App /> Todos can be completed by the user')
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

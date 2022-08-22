@@ -1,5 +1,5 @@
 import React from 'react'
-import {} from 'uuid'
+import { v4 } from 'uuid'
 
 export default function Todo(props) {
   const { todo, toggleStatus } = props // we need a spy in the test
@@ -10,6 +10,7 @@ export default function Todo(props) {
       className="todo"
     >
       {todo.name}{todo.completed ? ` ✔️` : ''}
+      {v4()}
     </div>
   )
 }

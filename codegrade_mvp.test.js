@@ -46,6 +46,8 @@ test('<Todo /> component renders completion of todos correctly', () => {
   // screen.queryByText('lady gaga') // this is null, test may not fail
   // screen.getByText('lady gaga') // this is a CRASH, test fails for sure
 })
-test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
+test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
+  
+})
 test.todo('<App /> Todos can be completed by the user')
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

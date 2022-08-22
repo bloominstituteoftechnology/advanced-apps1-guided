@@ -50,8 +50,9 @@ test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
   const spy = jest.fn() // function you can ask stuff to
   render(<Todo
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
-    toggleStatus={Function.prototype}
+    toggleStatus={spy}
   />)
+  fireEvent.click()
 })
 test.todo('<App /> Todos can be completed by the user')
 test.todo('<App /> Can submit a new todo, and shows up uncompleted')

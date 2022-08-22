@@ -1,13 +1,5 @@
 const yup = require('yup')
-
-const nanoid = (n) => {
-  const chars = 'abcdefghijklmnopqrstuvwxyz'
-  let result = ''
-  for (let i = 0; i < n; i++) {
-    result += chars[Math.floor(Math.random() * 26)]
-  }
-  return result
-}
+const nanoid = require('./nanoid')
 
 const schemaCreate = yup.object().shape({
   name: yup

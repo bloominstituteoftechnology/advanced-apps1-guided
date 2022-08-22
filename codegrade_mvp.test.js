@@ -47,6 +47,7 @@ test('<Todo /> component renders completion of todos correctly', () => {
   // screen.getByText('lady gaga') // this is a CRASH, test fails for sure
 })
 test('<Todo /> Clicking on todo fires the toggleStatus handler', () => {
+  const spy = jest.fn() // function you can ask stuff to
   render(<Todo
     todo={{ name: 'Alex', id: 'xyz', completed: false }}
     toggleStatus={Function.prototype}

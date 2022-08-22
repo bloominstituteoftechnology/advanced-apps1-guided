@@ -9,8 +9,7 @@ export default function Todo(props) {
       onClick={() => toggleStatus(todo.id)}
       className="todo"
     >
-      {todo.name}{todo.completed ? ` ✔️` : ''}
-      {v4()}
+      {todo.name}{todo.completed ? ` ✔️` : ''} {v4()}
     </div>
   )
 }

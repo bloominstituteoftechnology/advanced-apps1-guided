@@ -24,7 +24,7 @@ test('<App /> renders learners synchronously', () => {
   expect(screen.queryByText('Jordon', { exact: false })).not.toBeInTheDocument()
   expect(screen.queryByText('Brittany', { exact: false })).toBeInTheDocument()
 })
-test.todo('<App /> renders "laundry" asynchronously')
+test('<App /> renders "laundry" asynchronously')
 test.todo('<Todo /> component renders completion of todos correctly')
 test.todo('<Todo /> Clicking on todo fires the toggleStatus handler')
 test.todo('<App /> Todos can be completed by the user')

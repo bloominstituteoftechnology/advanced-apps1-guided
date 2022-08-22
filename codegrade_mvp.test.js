@@ -17,6 +17,7 @@ beforeEach(() => { resetTodos() })
 
 test('<App /> renders learners synchronously', () => {
   render(<App />)
+  const learner = screen.queryByT
   expect('Jordon').toBeInTheDocument()
 })
 test.todo('<App /> renders "laundry" asynchronously')
